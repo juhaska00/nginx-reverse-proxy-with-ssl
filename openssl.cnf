@@ -1,0 +1,19 @@
+[req]
+default_bits        = 2048
+default_keyfile     = privkey.pem
+distinguished_name  = req_distinguished_name
+x509_extensions     = v3_ca
+prompt = no
+
+[req_distinguished_name]
+countryName         = PL
+stateOrProvinceName = Mazowieckie
+localityName        = Warszawa
+organizationName    = LUXMED Sp. z o.o.
+commonName          = mailhog.local
+
+[v3_ca]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = mailhog.local
